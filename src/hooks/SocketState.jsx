@@ -6,7 +6,7 @@ export const SocketContext = createContext();
 export const SocketState = ({ children }) => {
     const [location, setLocation] = useState([]);
 
-    const socket = useMemo(() => io("http://localhost:5000/"), []);
+    const socket = useMemo(() => io("https://real-time-tracker-backend.onrender.com/"), []);
 
     useEffect(() => {
         socket.on("connect", () => {
